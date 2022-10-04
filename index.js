@@ -2,9 +2,9 @@ const TelegramBot = require('node-telegram-bot-api')
 const express = require('express')
 const cors = require('cors');
 const { query } = require('express');
+require('dotenv').config()
 
-
-const token = '5468176574:AAFibvXDplXYA8pngD19QZSLfG7uarf8CIY';
+const token = process.env.TOKEN;
 const webAppUrl = "https://effervescent-sable-4590dc.netlify.app";
 
 const bot = new TelegramBot(token, { polling: true });
